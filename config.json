@@ -1,0 +1,101 @@
+{
+    "Table_Teams":
+    {
+      "Spain": "https://www.livescore.com/soccer/spain/primera-division",
+      "Italy": ""
+    },
+    "Spain_Teams": [
+    {
+      "team_name": "Atletico Madrid",
+      "url": "https://www.whoscored.com/Teams/63/Show/Spain-Atletico-Madrid"
+    },
+    {
+      "team_name": "Athletic Bilbao",
+      "url": "https://www.whoscored.com/Teams/53/Show/Spain-Athletic-Bilbao"
+    },
+    {
+      "team_name": "Alaves",
+      "url": "https://www.whoscored.com/Teams/60/Show/Spain-Deportivo-Alaves"
+    },
+    {
+      "team_name": "Barcelona",
+      "url": "https://www.whoscored.com/Teams/65/Show/Spain-Barcelona"
+    },
+    {
+      "team_name": "Betis",
+      "url": "https://www.whoscored.com/Teams/54/Show/Spain-Real-Betis"
+    },
+    {
+      "team_name": "Celta Vigo",
+      "url": "https://www.whoscored.com/Teams/62/Show/Spain-Celta-Vigo"
+    },
+    {
+      "team_name": "Eibar",
+      "url": "https://www.whoscored.com/Teams/824/Show/Spain-Eibar"
+    },
+    {
+      "team_name": "Espanyol",
+      "url": "https://www.whoscored.com/Teams/70/Show/Spain-Espanyol"
+    },
+    {
+      "team_name": "Getafe",
+      "url": "https://www.whoscored.com/Teams/819/Show/Spain-Getafe"
+    },
+    {
+      "team_name": "Granada",
+      "url": "https://www.whoscored.com/Teams/925/Show/Spain-Granada"
+    },
+    {
+      "team_name": "Leganes",
+      "url": "https://www.whoscored.com/Teams/825/Show/Spain-Leganes"
+    },
+    {
+      "team_name": "Levante",
+      "url": "https://www.whoscored.com/Teams/832/Show/Spain-Levante"
+    },
+    {
+      "team_name": "Mallorca",
+      "url": "https://www.whoscored.com/Teams/51/Show/Spain-Mallorca"
+    },
+    {
+      "team_name": "Osasuna",
+      "url": "https://www.whoscored.com/Teams/131/Show/Spain-Osasuna"
+    },
+    {
+      "team_name": "Real Madrid",
+      "url": "https://www.whoscored.com/Teams/52/Show/Spain-Real-Madrid"
+    },
+    {
+      "team_name": "Real Socieadad",
+      "url": "https://www.whoscored.com/Teams/68/Show/Spain-Real-Sociedad"
+    },
+    {
+      "team_name": "Sevilla",
+      "url": "https://www.whoscored.com/Teams/67/Show/Spain-Sevilla"
+    },
+    {
+      "team_name": "Valencia",
+      "url": "https://www.whoscored.com/Teams/55/Show/Spain-Valencia"
+    },
+    {
+      "team_name": "Vailldolid",
+      "url": "https://www.whoscored.com/Teams/58/Show/Spain-Real-Valladolid"
+    },
+    {
+      "team_name": "Villarreal",
+      "url": "https://www.whoscored.com/Teams/839/Show/Spain-Villarreal"
+    }
+ ],
+  "Italy":
+          [],
+  "MySql":
+    {
+      "User": "postgres",
+      "Password": "Password1",
+      "Database": "Palpi",
+      "Host":"localhost"
+    }
+  ,
+  "Driver_Path": "utils/chromedriver.exe"
+
+}
