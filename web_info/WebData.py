@@ -65,7 +65,7 @@ class ScrapeWebData:
                 player_data['assists'] = data_of_players[-8]
                 player_data['minutes_played'] = data_of_players[-10]
                 player_data['rating'] = data_of_players[-1]
-                player_data['apps'] = data_of_players[-11]
+                player_data['apps'] = data_of_players[-11].split("(")[0]
 
                 player_sample = Player(player_data)
                 self.players.append(player_sample)

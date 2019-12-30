@@ -25,8 +25,16 @@ class DB_handler:
         )
         self.cursor = self.DBManager.cursor()
 
-    def insert_db(self,players):
-        self.cursor.executemany("""
-            INSERT INTO %s (name, gender)
-            VALUES (%(name)s, %(gender)s)""", self.database, players)
-        self.cursor.commit()
+    def insert_db(self,player_info):
+        print(type(player_info.name))
+        sql_query= "INSERT INTO players_data VALUES ({},{},{},{},{},{},{})".format(
+                                    "'"+player_info.name+"'",
+                                    "'team a'",
+                                    "'postion b'",
+                                    "'"+player_info.goals+ "'",
+                                    "'"+player_info.assists+ "'",
+                                    "'"+player_info.apps+ "'",
+                                    "'"+player_info.rating+ "'")
+        print("sql_query-",sql_query)
+        self.cursor.execute(sql_query)
+        self.DBManager.commit()

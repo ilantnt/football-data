@@ -17,13 +17,23 @@ if __name__ == '__main__':
         handler.get_url_data("https://www.whoscored.com/Teams/63/Show/Spain-{0}".format("Atletico-Madrid"))
         while not handler.extract_players_data():
             handler.get_url_data("https://www.whoscored.com/Teams/63/Show/Spain-{0}".format("Atletico-Madrid"))
-        players_insert = handler.parse_players_scraped_data()
 
-        print("nah")
+        players_data_insert = handler.parse_players_scraped_data()
+        for i in (players_data_insert):
+
+            print("players_data_insert name,",i.name)
+            print("players_data_insert goals,",i.goals)
+            print("players_data_insert assits,",i.assists)
+            print("players_data_insert rating,",i.rating)
+            print("players_data_insert apps,",i.apps)
+            print("\n")
+
         DB_handler = DB_handler(conf.get_db_auth())
         try:
             DB_handler.connect()
             print("whey")
+            for player in players_data_insert:
+                DB_handler.insert_db(player)
         except Exception as e:
             print(e)
             raise e
