@@ -20,6 +20,7 @@ class ScrapeWebData:
         self.driver.get(url)
 
     def click_accept_terms(self):
+        print("accpring terms")
         try:
             accept_btn = self.driver.find_element_by_xpath('//*[@id="qcCmpButtons"]/button[2]')
             accept_btn.click()

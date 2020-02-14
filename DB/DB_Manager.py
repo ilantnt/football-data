@@ -26,15 +26,19 @@ class DB_handler:
         self.cursor = self.DBManager.cursor()
 
     def insert_db(self,player_info):
-        print(player_info.name)
-        sql_query= "INSERT INTO players_data VALUES ({},{},{},{},{},{},{})".format(
-                                    "'"+player_info.name+"'",
-                                    "'team a'",
-                                    "'postion b'",
-                                    0 if player_info.goals=="-" else player_info.goals,
-                                    0 if player_info.assists=="-" else player_info.assists,
-                                    0 if player_info.apps=="-" else player_info.apps,
-                                    player_info.rating)
-        print(sql_query)
-        self.cursor.execute(sql_query)
-        self.DBManager.commit()
+        try:
+            print(player_info.name)
+            sql_query= "INSERT INTO players_data VALUES ({},{},{},{},{},{},{})".format(
+                                        "'"+player_info.name+"'",
+                                        "'team a'",
+                                        "'postion b'",
+                                        0 if player_info.goals=="-" else player_info.goals,
+                                        0 if player_info.assists=="-" else player_info.assists,
+                                        0 if player_info.apps=="-" else player_info.apps,
+                                        player_info.rating)
+            print(sql_query)
+            self.cursor.execute(sql_query)
+            self.DBManager.commit()
+        except Exception as e:
+            print("Error in inserting data to DB")
+            raise(e)
