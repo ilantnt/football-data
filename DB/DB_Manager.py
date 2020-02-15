@@ -25,12 +25,12 @@ class DB_handler:
         )
         self.cursor = self.DBManager.cursor()
 
-    def insert_db(self,player_info):
+    def insert_db(self,player_info,team_name):
         try:
             print(player_info.name)
             sql_query= "INSERT INTO players_data VALUES ({},{},{},{},{},{},{})".format(
                                         "'"+player_info.name+"'",
-                                        "'team a'",
+                                        "'"+team_name+"'",
                                         "'postion b'",
                                         0 if player_info.goals=="-" else player_info.goals,
                                         0 if player_info.assists=="-" else player_info.assists,

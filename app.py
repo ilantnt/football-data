@@ -22,13 +22,13 @@ def iterate_teams(conf,handler):
         while not handler.extract_players_data():
             handler.get_url_data(team["url"])
         DB_manager= db_connect(conf)
-        parse_players_data(handler,DB_manager)
+        parse_players_data(handler,DB_manager,team["team_name"])
 
-def parse_players_data(handler,DB_manager):
+def parse_players_data(handler,DB_manager,team_name):
     try:
         players_data_insert = handler.parse_players_scraped_data()
         for player in (players_data_insert):
-            DB_manager.insert_db(player)
+            DB_manager.insert_db(player,team_name)
 
     except Exception as e:
         print("Error in scraping {}".format(e))
