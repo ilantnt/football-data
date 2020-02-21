@@ -17,13 +17,13 @@ def close_connection(handler):
     handler.close_con()
 
 def iterate_teams(conf,handler):
-    # for team in conf.get_spain_teams():
-    #     print(team)
-    #     handler.get_url_data(team["url"])
-    #     while not handler.extract_players_data():
-    #         handler.get_url_data(team["url"])
-    #     DB_manager= db_connect(conf)
-    #     parse_players_data(handler,DB_manager,team["team_name"])
+    for team in conf.get_spain_teams():
+        print(team)
+        handler.get_url_data(team["url"])
+        while not handler.extract_players_data():
+            handler.get_url_data(team["url"])
+        DB_manager= db_connect(conf)
+        parse_players_data(handler,DB_manager,team["team_name"])
 
     for team in conf.get_italy_teams():
         print(team)

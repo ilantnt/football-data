@@ -28,9 +28,21 @@ class DB_handler:
     def insert_db(self,player_info,team_name):
         try:
             print(player_info.name)
+            player_info.name = player_info.name.lower()
+            player_info.name = player_info.name.replace('í','i')
+            player_info.name = player_info.name.replace('â', 'a')
+            player_info.name = player_info.name.replace('á', 'a')
+            player_info.name = player_info.name.replace('ô', 'o')
+            player_info.name = player_info.name.replace('ó', 'o')
+            player_info.name = player_info.name.replace('é', 'e')
+            player_info.name = player_info.name.replace('ñ', 'n')
+            player_info.name = player_info.name.replace('ú', 'u')
+            print(player_info.name)
 
-            sql_query= "INSERT INTO players_data select ({},{},{},{},{},{},{})" \
-                       " where NOT EXISTS (SELECT * FROM players_data WHERE name like '{}')".format(
+
+
+            sql_query= "INSERT INTO players_data VALUES ({},{},{},{},{},{},{})" \
+                       "on conflict (name) do nothing".format(
                                         "'"+(player_info.name.replace("'","`"))+"'" if "'" in player_info.name else "'"+player_info.name+"'",
                                         "'"+team_name+"'",
                                         "'postion b'",
@@ -38,8 +50,7 @@ class DB_handler:
                                         0 if player_info.assists=="-" else player_info.assists,
                                         0 if player_info.apps=="-" else player_info.apps,
                                         player_info.rating,
-                                        (player_info.name.replace("'","`")) if "'" in player_info.name else player_info.name)
-            print(sql_query)
+                                        )
             self.cursor.execute(sql_query)
             self.DBManager.commit()
         except Exception as e:
