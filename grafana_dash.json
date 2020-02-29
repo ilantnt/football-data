@@ -1,0 +1,833 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 1,
+  "iteration": 1582404463538,
+  "links": [],
+  "panels": [
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 18,
+      "panels": [
+        {
+          "columns": [],
+          "datasource": null,
+          "fontSize": "100%",
+          "gridPos": {
+            "h": 3,
+            "w": 24,
+            "x": 0,
+            "y": 1
+          },
+          "id": 20,
+          "options": {},
+          "pageSize": null,
+          "showHeader": true,
+          "sort": {
+            "col": 0,
+            "desc": true
+          },
+          "styles": [
+            {
+              "alias": "Time",
+              "align": "auto",
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "pattern": "team",
+              "preserveFormat": false,
+              "type": "hidden"
+            },
+            {
+              "alias": "",
+              "align": "left",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "decimals": 0,
+              "pattern": "team",
+              "thresholds": [],
+              "type": "number",
+              "unit": "short"
+            },
+            {
+              "alias": "",
+              "align": "auto",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "dateFormat": "YYYY-MM-DD HH:mm:ss",
+              "decimals": 2,
+              "mappingType": 1,
+              "pattern": "rating",
+              "thresholds": [],
+              "type": "number",
+              "unit": "short"
+            }
+          ],
+          "targets": [
+            {
+              "format": "table",
+              "group": [],
+              "metricColumn": "none",
+              "rawQuery": true,
+              "rawSql": "SELECT * from players_data where team=[[team]] and name='[[player]]'",
+              "refId": "A",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "column"
+                  }
+                ]
+              ],
+              "timeColumn": "time",
+              "where": [
+                {
+                  "name": "$__timeFilter",
+                  "params": [],
+                  "type": "macro"
+                }
+              ]
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Player info",
+          "transform": "table",
+          "type": "table"
+        }
+      ],
+      "title": "Player info",
+      "type": "row"
+    },
+    {
+      "collapsed": true,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 1
+      },
+      "id": 16,
+      "panels": [
+        {
+          "columns": [],
+          "datasource": null,
+          "fontSize": "100%",
+          "gridPos": {
+            "h": 8,
+            "w": 8,
+            "x": 0,
+            "y": 2
+          },
+          "id": 14,
+          "options": {},
+          "pageSize": null,
+          "showHeader": true,
+          "sort": {
+            "col": 3,
+            "desc": true
+          },
+          "styles": [
+            {
+              "alias": "",
+              "align": "left",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "decimals": 0,
+              "pattern": "goals",
+              "thresholds": [],
+              "type": "number",
+              "unit": "short"
+            }
+          ],
+          "targets": [
+            {
+              "format": "table",
+              "group": [],
+              "metricColumn": "none",
+              "rawQuery": true,
+              "rawSql": "SELECT name,goals,assists,rating from players_data where team in ([[team]]) and position ~ 'defe'",
+              "refId": "A",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "column"
+                  }
+                ]
+              ],
+              "timeColumn": "time",
+              "where": [
+                {
+                  "name": "$__timeFilter",
+                  "params": [],
+                  "type": "macro"
+                }
+              ]
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "defender",
+          "transform": "table",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "datasource": null,
+          "fontSize": "100%",
+          "gridPos": {
+            "h": 8,
+            "w": 8,
+            "x": 8,
+            "y": 2
+          },
+          "id": 10,
+          "options": {},
+          "pageSize": null,
+          "showHeader": true,
+          "sort": {
+            "col": 3,
+            "desc": true
+          },
+          "styles": [
+            {
+              "alias": "",
+              "align": "left",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "decimals": 0,
+              "pattern": "goals",
+              "thresholds": [],
+              "type": "number",
+              "unit": "short"
+            }
+          ],
+          "targets": [
+            {
+              "format": "table",
+              "group": [],
+              "metricColumn": "none",
+              "rawQuery": true,
+              "rawSql": "SELECT name,goals,assists,rating from players_data where team in ([[team]]) and position ~ 'Mid'",
+              "refId": "A",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "column"
+                  }
+                ]
+              ],
+              "timeColumn": "time",
+              "where": [
+                {
+                  "name": "$__timeFilter",
+                  "params": [],
+                  "type": "macro"
+                }
+              ]
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "middlefilder",
+          "transform": "table",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "datasource": null,
+          "fontSize": "100%",
+          "gridPos": {
+            "h": 8,
+            "w": 8,
+            "x": 16,
+            "y": 2
+          },
+          "id": 12,
+          "options": {},
+          "pageSize": null,
+          "showHeader": true,
+          "sort": {
+            "col": 3,
+            "desc": true
+          },
+          "styles": [
+            {
+              "alias": "",
+              "align": "left",
+              "colorMode": null,
+              "colors": [
+                "rgba(245, 54, 54, 0.9)",
+                "rgba(237, 129, 40, 0.89)",
+                "rgba(50, 172, 45, 0.97)"
+              ],
+              "decimals": 0,
+              "pattern": "goals",
+              "thresholds": [],
+              "type": "number",
+              "unit": "short"
+            }
+          ],
+          "targets": [
+            {
+              "format": "table",
+              "group": [],
+              "metricColumn": "none",
+              "rawQuery": true,
+              "rawSql": "SELECT name,goals,assists,rating from players_data where team in ([[team]]) and position ~ 'Att'",
+              "refId": "A",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "column"
+                  }
+                ]
+              ],
+              "timeColumn": "time",
+              "where": [
+                {
+                  "name": "$__timeFilter",
+                  "params": [],
+                  "type": "macro"
+                }
+              ]
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Attacker",
+          "transform": "table",
+          "type": "table"
+        },
+        {
+          "columns": [],
+          "datasource": null,
+          "fontSize": "100%",
+          "gridPos": {
+            "h": 8,
+            "w": 24,
+            "x": 0,
+            "y": 10
+          },
+          "id": 6,
+          "options": {},
+          "pageSize": null,
+          "showHeader": true,
+          "sort": {
+            "col": 3,
+            "desc": true
+          },
+          "styles": [],
+          "targets": [
+            {
+              "format": "table",
+              "group": [],
+              "metricColumn": "goals",
+              "rawQuery": true,
+              "rawSql": "SELECT\n  name,\n  apps,\n  goals,\n  rating\nFROM players_data\nWHERE\n  team IN ([[team]])",
+              "refId": "A",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "name"
+                    ],
+                    "type": "column"
+                  }
+                ]
+              ],
+              "table": "players_data",
+              "timeColumn": "apps",
+              "timeColumnType": "int8",
+              "where": [
+                {
+                  "datatype": "varchar",
+                  "name": "",
+                  "params": [
+                    "team",
+                    "IN",
+                    "([[team]])"
+                  ],
+                  "type": "expression"
+                }
+              ]
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "stats",
+          "transform": "table",
+          "type": "table"
+        }
+      ],
+      "title": "team Stats",
+      "type": "row"
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 22,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "text": "Barcelona",
+          "value": [
+            "Barcelona"
+          ]
+        },
+        "datasource": "PostgreSQL",
+        "definition": "select team from players_data group by players_data.team",
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": true,
+        "name": "team",
+        "options": [
+          {
+            "selected": false,
+            "text": "Sassuolo",
+            "value": "Sassuolo"
+          },
+          {
+            "selected": false,
+            "text": "Athletic Bilbao",
+            "value": "Athletic Bilbao"
+          },
+          {
+            "selected": false,
+            "text": "Mallorca",
+            "value": "Mallorca"
+          },
+          {
+            "selected": false,
+            "text": "Verona",
+            "value": "Verona"
+          },
+          {
+            "selected": false,
+            "text": "Lecce",
+            "value": "Lecce"
+          },
+          {
+            "selected": false,
+            "text": "Udinese",
+            "value": "Udinese"
+          },
+          {
+            "selected": false,
+            "text": "Napoli",
+            "value": "Napoli"
+          },
+          {
+            "selected": false,
+            "text": "Eibar",
+            "value": "Eibar"
+          },
+          {
+            "selected": false,
+            "text": "Brescia",
+            "value": "Brescia"
+          },
+          {
+            "selected": false,
+            "text": "Atalanta",
+            "value": "Atalanta"
+          },
+          {
+            "selected": false,
+            "text": "Spal",
+            "value": "Spal"
+          },
+          {
+            "selected": false,
+            "text": "Bologna",
+            "value": "Bologna"
+          },
+          {
+            "selected": false,
+            "text": "Granada",
+            "value": "Granada"
+          },
+          {
+            "selected": false,
+            "text": "Real Socieadad",
+            "value": "Real Socieadad"
+          },
+          {
+            "selected": false,
+            "text": "Getafe",
+            "value": "Getafe"
+          },
+          {
+            "selected": false,
+            "text": "Alaves",
+            "value": "Alaves"
+          },
+          {
+            "selected": false,
+            "text": "Real Madrid",
+            "value": "Real Madrid"
+          },
+          {
+            "selected": false,
+            "text": "Milan",
+            "value": "Milan"
+          },
+          {
+            "selected": false,
+            "text": "Vailldolid",
+            "value": "Vailldolid"
+          },
+          {
+            "selected": false,
+            "text": "Villarreal",
+            "value": "Villarreal"
+          },
+          {
+            "selected": false,
+            "text": "Osasuna",
+            "value": "Osasuna"
+          },
+          {
+            "selected": false,
+            "text": "Lazio",
+            "value": "Lazio"
+          },
+          {
+            "selected": false,
+            "text": "Levante",
+            "value": "Levante"
+          },
+          {
+            "selected": false,
+            "text": "Torino",
+            "value": "Torino"
+          },
+          {
+            "selected": false,
+            "text": "Parma",
+            "value": "Parma"
+          },
+          {
+            "selected": false,
+            "text": "Inter",
+            "value": "Inter"
+          },
+          {
+            "selected": false,
+            "text": "Leganes",
+            "value": "Leganes"
+          },
+          {
+            "selected": false,
+            "text": "Betis",
+            "value": "Betis"
+          },
+          {
+            "selected": true,
+            "text": "Barcelona",
+            "value": "Barcelona"
+          },
+          {
+            "selected": false,
+            "text": "Celta Vigo",
+            "value": "Celta Vigo"
+          },
+          {
+            "selected": false,
+            "text": "Valencia",
+            "value": "Valencia"
+          },
+          {
+            "selected": false,
+            "text": "Cagliari",
+            "value": "Cagliari"
+          },
+          {
+            "selected": false,
+            "text": "Genoa",
+            "value": "Genoa"
+          },
+          {
+            "selected": false,
+            "text": "Atletico Madrid",
+            "value": "Atletico Madrid"
+          },
+          {
+            "selected": false,
+            "text": "Espanyol",
+            "value": "Espanyol"
+          },
+          {
+            "selected": false,
+            "text": "Juventus",
+            "value": "Juventus"
+          },
+          {
+            "selected": false,
+            "text": "Roma",
+            "value": "Roma"
+          },
+          {
+            "selected": false,
+            "text": "Sampdoria",
+            "value": "Sampdoria"
+          },
+          {
+            "selected": false,
+            "text": "Sevilla",
+            "value": "Sevilla"
+          },
+          {
+            "selected": false,
+            "text": "Fiorentina",
+            "value": "Fiorentina"
+          }
+        ],
+        "query": "select team from players_data group by players_data.team",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "text": "lionel messi",
+          "value": "lionel messi"
+        },
+        "datasource": "PostgreSQL",
+        "definition": "select name from players_data where team = '${team:raw}'",
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "player",
+        "options": [
+          {
+            "selected": false,
+            "text": "jordi alba",
+            "value": "jordi alba"
+          },
+          {
+            "selected": false,
+            "text": "junior firpo",
+            "value": "junior firpo"
+          },
+          {
+            "selected": false,
+            "text": "sergi roberto",
+            "value": "sergi roberto"
+          },
+          {
+            "selected": false,
+            "text": "carles perez",
+            "value": "carles perez"
+          },
+          {
+            "selected": false,
+            "text": "neto",
+            "value": "neto"
+          },
+          {
+            "selected": false,
+            "text": "arthur",
+            "value": "arthur"
+          },
+          {
+            "selected": false,
+            "text": "rafinha",
+            "value": "rafinha"
+          },
+          {
+            "selected": false,
+            "text": "marc-andre ter stegen",
+            "value": "marc-andre ter stegen"
+          },
+          {
+            "selected": false,
+            "text": "clement lenglet",
+            "value": "clement lenglet"
+          },
+          {
+            "selected": false,
+            "text": "gerard pique",
+            "value": "gerard pique"
+          },
+          {
+            "selected": false,
+            "text": "nelson semedo",
+            "value": "nelson semedo"
+          },
+          {
+            "selected": false,
+            "text": "samuel umtiti",
+            "value": "samuel umtiti"
+          },
+          {
+            "selected": false,
+            "text": "moussa wague",
+            "value": "moussa wague"
+          },
+          {
+            "selected": false,
+            "text": "ousmane dembele",
+            "value": "ousmane dembele"
+          },
+          {
+            "selected": false,
+            "text": "sergio busquets",
+            "value": "sergio busquets"
+          },
+          {
+            "selected": false,
+            "text": "antoine griezmann",
+            "value": "antoine griezmann"
+          },
+          {
+            "selected": true,
+            "text": "lionel messi",
+            "value": "lionel messi"
+          },
+          {
+            "selected": false,
+            "text": "riqui puig",
+            "value": "riqui puig"
+          },
+          {
+            "selected": false,
+            "text": "ivan rakitic",
+            "value": "ivan rakitic"
+          },
+          {
+            "selected": false,
+            "text": "arturo vidal",
+            "value": "arturo vidal"
+          },
+          {
+            "selected": false,
+            "text": "carles alena",
+            "value": "carles alena"
+          },
+          {
+            "selected": false,
+            "text": "ronald araujo",
+            "value": "ronald araujo"
+          },
+          {
+            "selected": false,
+            "text": "luis suarez",
+            "value": "luis suarez"
+          },
+          {
+            "selected": false,
+            "text": "frenkie de jong",
+            "value": "frenkie de jong"
+          },
+          {
+            "selected": false,
+            "text": "ansu fati",
+            "value": "ansu fati"
+          },
+          {
+            "selected": false,
+            "text": "jean-clair todibo",
+            "value": "jean-clair todibo"
+          },
+          {
+            "selected": false,
+            "text": "alex collado",
+            "value": "alex collado"
+          }
+        ],
+        "query": "select name from players_data where team = '${team:raw}'",
+        "refresh": 0,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "football",
+  "uid": "BEBLCUQWz",
+  "version": 15
+}

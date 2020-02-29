@@ -12,5 +12,8 @@ class Configuration():
     def get_spain_teams(self):
         return self.data['Spain_Teams']
 
+    def get_italy_teams(self):
+        return self.data['Italy_Teams']
+
     def get_db_auth(self):
         return self.data['MySql']

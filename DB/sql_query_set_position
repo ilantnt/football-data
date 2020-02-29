@@ -1,0 +1,4 @@
+update players_data
+set position = players_position.position
+from players_position
+where  players_position.name ~ players_data.name

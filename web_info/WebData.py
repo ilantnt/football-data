@@ -15,11 +15,14 @@ class ScrapeWebData:
         self.players = []
         self.players_scraped_data = []
 
+    def close_con(self):
+        self.driver.close()
 
     def get_url_data(self, url):
         self.driver.get(url)
 
     def click_accept_terms(self):
+        print("accpring terms")
         try:
             accept_btn = self.driver.find_element_by_xpath('//*[@id="qcCmpButtons"]/button[2]')
             accept_btn.click()
@@ -54,6 +57,7 @@ class ScrapeWebData:
 
     def parse_players_scraped_data(self):
         print(self.players_scraped_data)
+        self.players = []
         for i in range(len(self.players_scraped_data)):
 
             if i % 2:

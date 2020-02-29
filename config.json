@@ -86,13 +86,93 @@
       "url": "https://www.whoscored.com/Teams/839/Show/Spain-Villarreal"
     }
  ],
-  "Italy":
-          [],
+    "Italy_Teams":[
+         {
+        "team_name": "Atalanta",
+        "url": "https://www.whoscored.com/Teams/300/Show/Italy-Atalanta"
+      },
+      {
+        "team_name": "Lazio",
+        "url": "https://www.whoscored.com/Teams/77/Show/Italy-Lazio"
+      },
+      {
+        "team_name": "Inter",
+        "url": "https://www.whoscored.com/Teams/75/Show/Italy-Inter"
+      },
+      {
+        "team_name": "Juventus",
+        "url": "https://www.whoscored.com/Teams/87/Show/Italy-Juventus"
+      },
+      {
+        "team_name": "Roma",
+        "url": "https://www.whoscored.com/Teams/84/Show/Italy-Roma"
+      },
+      {
+        "team_name": "Sassuolo",
+        "url": "https://www.whoscored.com/Teams/2889/Show/Italy-Sassuolo"
+      },
+      {
+        "team_name": "Napoli",
+        "url": "https://www.whoscored.com/Teams/276/Show/Italy-Napoli"
+      },
+      {
+        "team_name": "Milan",
+        "url": "https://www.whoscored.com/Teams/80/Show/Italy-AC-Milan"
+      },
+      {
+        "team_name": "Parma",
+        "url": "https://www.whoscored.com/Teams/24341/Show/Italy-Parma-Calcio-1913"
+      },
+      {
+        "team_name": "Torino",
+        "url": "https://www.whoscored.com/Teams/72/Show/Italy-Torino"
+      },
+      {
+        "team_name": "Verona",
+        "url": "https://www.whoscored.com/Teams/76/Show/Italy-Verona"
+      },
+      {
+        "team_name": "Bologna",
+        "url": "https://www.whoscored.com/Teams/71/Show/Italy-Bologna"
+      },
+      {
+        "team_name": "Cagliari",
+        "url": "https://www.whoscored.com/Teams/78/Show/Italy-Cagliari"
+      },
+      {
+        "team_name": "Fiorentina",
+        "url": "https://www.whoscored.com/Teams/73/Show/Italy-Fiorentina"
+      },
+      {
+        "team_name": "Udinese",
+        "url": "https://www.whoscored.com/Teams/86/Show/Italy-Udinese"
+      },
+      {
+        "team_name": "Sampdoria",
+        "url": "https://www.whoscored.com/Teams/271/Show/Italy-Sampdoria"
+      },
+      {
+        "team_name": "Lecce",
+        "url": "https://www.whoscored.com/Teams/79/Show/Italy-Lecce"
+      },
+      {
+        "team_name": "Genoa",
+        "url": "https://www.whoscored.com/Teams/278/Show/Italy-Genoa"
+      },
+      {
+        "team_name": "Spal",
+        "url": "https://www.whoscored.com/Teams/1502/Show/Italy-SPAL-2013"
+      },
+      {
+        "team_name": "Brescia",
+        "url": "https://www.whoscored.com/Teams/144/Show/Italy-Brescia"
+      }
+  ],
   "MySql":
     {
       "User": "postgres",
-      "Password": "Password1",
-      "Database": "Palpi",
+      "Password": "Baily0802",
+      "Database": "football",
       "Host":"localhost"
     }
   ,
